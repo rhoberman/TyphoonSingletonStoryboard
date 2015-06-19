@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -13,11 +13,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tq6-vM-yWL">
-                                <rect key="frame" x="213" y="140" width="174" height="320"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tq6-vM-yWL">
+                                <rect key="frame" x="100" y="269" width="121" height="30"/>
                                 <state key="normal" title="Switch Root View">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -25,8 +25,14 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mhw-S5-UNr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Singleton Id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lee-ix-fVQ">
-                                <rect key="frame" x="252" y="63" width="92" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Singleton Id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lee-ix-fVQ">
+                                <rect key="frame" x="114" y="63" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reinjected Singleton Id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5m-gN-zTR">
+                                <rect key="frame" x="71" y="158" width="178" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -34,28 +40,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Lee-ix-fVQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="43" id="FfD-rv-3rQ"/>
-                            <constraint firstItem="Tq6-vM-yWL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="213" id="JIL-iG-2ES"/>
-                            <constraint firstAttribute="centerY" secondItem="Tq6-vM-yWL" secondAttribute="centerY" id="PKO-jx-Pmb"/>
-                            <constraint firstItem="Tq6-vM-yWL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="Xtg-Ak-hfh"/>
-                            <constraint firstAttribute="centerX" secondItem="Lee-ix-fVQ" secondAttribute="centerX" id="ZeO-Ku-iIj"/>
-                            <constraint firstItem="Tq6-vM-yWL" firstAttribute="top" secondItem="Lee-ix-fVQ" secondAttribute="bottom" constant="56" id="l7o-d1-p0N"/>
-                            <constraint firstAttribute="centerX" secondItem="Tq6-vM-yWL" secondAttribute="centerX" id="pYo-h8-UUM"/>
+                            <constraint firstItem="Tq6-vM-yWL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="268-bQ-GMv"/>
+                            <constraint firstItem="B5m-gN-zTR" firstAttribute="centerX" secondItem="Lee-ix-fVQ" secondAttribute="centerX" id="49r-jg-8SY"/>
+                            <constraint firstItem="Tq6-vM-yWL" firstAttribute="centerX" secondItem="B5m-gN-zTR" secondAttribute="centerX" id="HkM-Bo-Xmh"/>
+                            <constraint firstItem="B5m-gN-zTR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="158" id="QHp-Qh-kzM"/>
+                            <constraint firstItem="Tq6-vM-yWL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jGV-9I-0ak"/>
+                            <constraint firstItem="B5m-gN-zTR" firstAttribute="top" secondItem="Lee-ix-fVQ" secondAttribute="bottom" constant="74" id="q9T-8o-0ki"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="JIL-iG-2ES"/>
-                                <exclude reference="Xtg-Ak-hfh"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="button" destination="Tq6-vM-yWL" id="Gtk-4Y-EjF"/>
+                        <outlet property="reinjectedSingletonId" destination="B5m-gN-zTR" id="klm-rg-kD7"/>
                         <outlet property="singletonId" destination="Lee-ix-fVQ" id="Ikn-YL-e29"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="90.666666666666671" y="352.15999999999997"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="ruN-2t-YIC">
@@ -66,7 +67,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1s8-d1-fbZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6OL-Go-cMv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -74,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyT-Fp-b44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="520" y="2019"/>
+            <point key="canvasLocation" x="277.33333333333331" y="1911.3199999999999"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="7Hs-V7-pig">
@@ -85,11 +86,17 @@
                         <viewControllerLayoutGuide type="bottom" id="j4V-u3-wwC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pa5-E2-miY">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Singleton Id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QK0-5n-iP2">
-                                <rect key="frame" x="254" y="67" width="92" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Singleton Id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QK0-5n-iP2">
+                                <rect key="frame" x="114" y="81" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reinjected Singleton Id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuA-Zv-gsN">
+                                <rect key="frame" x="71" y="176" width="178" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -97,17 +104,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="QK0-5n-iP2" secondAttribute="centerX" id="QdB-Ot-Egw"/>
+                            <constraint firstAttribute="centerX" secondItem="QK0-5n-iP2" secondAttribute="centerX" id="DQg-aO-SYh"/>
+                            <constraint firstItem="AuA-Zv-gsN" firstAttribute="top" secondItem="QK0-5n-iP2" secondAttribute="bottom" constant="74" id="E5d-gf-vCi"/>
+                            <constraint firstAttribute="centerX" secondItem="AuA-Zv-gsN" secondAttribute="centerX" id="ggu-ZV-6bY"/>
+                            <constraint firstItem="QK0-5n-iP2" firstAttribute="top" secondItem="JxY-9v-PAQ" secondAttribute="bottom" constant="61" id="nJS-fC-mkc"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="VFK-pa-NOd"/>
                     <connections>
+                        <outlet property="reinjectedSingletonId" destination="AuA-Zv-gsN" id="7rI-dR-j64"/>
                         <outlet property="singletonId" destination="QK0-5n-iP2" id="Pze-kW-McU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="giz-Qx-SPk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="520" y="1357"/>
+            <point key="canvasLocation" x="277.33333333333331" y="1284.6266666666666"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="EiF-yr-fRx">
@@ -126,7 +137,12 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9e-25-Mdf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-300" y="1688"/>
+            <point key="canvasLocation" x="-160" y="1597.9733333333334"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

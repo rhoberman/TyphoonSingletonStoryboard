@@ -15,6 +15,7 @@ public class ApplicationAssembly : TyphoonAssembly {
         return TyphoonDefinition.withClass(ViewController.self) {
             (definition) in
             definition.injectProperty("singleton", with: self.singleton())
+            definition.injectProperty("reinjectedSingleton", with: self.singleton())
         }
         
     }
@@ -24,6 +25,8 @@ public class ApplicationAssembly : TyphoonAssembly {
         return TyphoonDefinition.withClass(FirstTabViewController.self) {
             (definition) in
             definition.injectProperty("singleton", with: self.singleton())
+            definition.injectProperty("reinjectedSingleton", with: self.singleton())
+
         }
         
     }
